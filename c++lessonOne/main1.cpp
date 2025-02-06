@@ -4,6 +4,9 @@
 #include <array>
 #include <algorithm>
 
+int add(int a, int b);
+auto add(float a, float b) -> float;
+
 int main(){
 
     // std::array<int, 100> ids;
@@ -15,12 +18,37 @@ int main(){
 
     // }
 
+    /*
     std::array<int , 3> myArray;
     std::fill(std::begin(myArray), std::end(myArray), 1024);
 
     for(int element : myArray){
         std::cout << element << std::endl;
     }
+    */
+
+   for(int i = 0; i < 10; i++){
+    std::cout << "start of loop" << std::endl;
+    continue;
+    std::cout << i << std::endl;
+   }
+
+    for(int i = 0; i < 10; i++){
+        std::cout << "start of loop" << std::endl;
+        if(i == 5){
+            break;
+        }
+        std::cout << i << std::endl;
+    }
+
 
     return 0;
+}
+
+int add(int a, int b){
+    return a + b;
+}
+
+float add(float a, float b){
+    return a + b;
 }
