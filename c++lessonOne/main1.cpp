@@ -7,6 +7,19 @@
 int add(int a, int b);
 auto add(float a, float b) -> float;
 
+int countdown(int n){
+    // 1. Base case 
+    //
+    if(n == 0){
+        std::cout << "Blast off" << std::endl;
+        return 0;
+    }
+
+    // Recursive Case
+    std::cout << n << std::endl;
+    return countdown(n - 1); 
+}
+
 int main(){
 
     // std::array<int, 100> ids;
@@ -27,6 +40,9 @@ int main(){
     }
     */
 
+
+
+/*
    for(int i = 0; i < 10; i++){
     std::cout << "start of loop" << std::endl;
     continue;
@@ -40,15 +56,22 @@ int main(){
         }
         std::cout << i << std::endl;
     }
+    */
+
+
+   //recursion 
+
+   countdown(8);
+
 
 
     return 0;
 }
 
-int add(int a, int b){
-    return a + b;
-}
+// int add(int a, int b){
+//     return a + b;
+// }
 
-float add(float a, float b){
-    return a + b;
-}
+// float add(float a, float b){
+//     return a + b;
+// }
