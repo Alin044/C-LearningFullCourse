@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 
-void printMyVec(std::vector<int> vec){
+void printMyVec(const std::vector<int>& vec){
     for(int i = 0; i < vec.size(); i++){
         std::cout << vec[i] << std::endl;
     }
