@@ -13,8 +13,14 @@ class UDT{
 };
 
 int main(){
-    
+    //create a unique pointer
     std::unique_ptr<UDT> mike = std::unique_ptr<UDT>(new UDT);
+    //create a array using a uniquie pointer
+    //std::unique_ptr<UDT[]> mikeArray = std::unique_ptr<UDT[]>(new UDT[20]);
+    std::unique_ptr<UDT[]> mikeArr = std::make_unique<UDT[]>(10); //this is a function that does the same as above
+    //the better way
+    
+
 
     return 0;
 }
