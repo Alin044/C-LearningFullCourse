@@ -37,6 +37,23 @@ class Array{
             }
         }
 
+        //copy assignment operator
+        //object is already constructed
+        //makeing a copy later (myArray2 = myArray)
+        Array& operator = (const Array& rhs){
+            std::cout << "Copy assignment operator" << std::endl;
+            if(&rhs == this){
+                return *this; 
+            }
+            delete[] data;
+            data = new int[10];
+            for(int i = 0; i < 10; i++){
+                data[i] = rhs.data[i];
+            }        
+            return *this;
+        }
+        
+
     private:
         int* data;
 };
@@ -44,7 +61,8 @@ class Array{
 int main(){
 
     Array myArray;
-    Array myArray2 = myArray;
+    Array myArray2;
+    myArray2 = myArray;
 
     myArray.SetData(0, 100000);
     myArray.SetData(1, 55);
