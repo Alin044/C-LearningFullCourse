@@ -1,22 +1,6 @@
 #include <iostream>
 #include <string>
-
-class Student{
-    public:
-        Student(){
-            std::cout << "Constructor " << std::endl;
-        }
-
-        ~Student(){
-            std::cout << "Destructor " << std::endl;
-        }
-        
-        void printName(){
-            std::cout << "Student name : " << m_name << std::endl;
-        }
-    public:
-        std::string m_name;
-};
+#include "Student.hpp"
 
 int main(){
 
