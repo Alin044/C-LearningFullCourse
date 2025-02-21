@@ -24,6 +24,19 @@ class Array{
             }
         }
 
+        void SetData(int index, int value){
+            data[index] = value;
+        }
+        //copy constructor
+        //
+        Array(const Array& rhs){
+            std::cout << "Copy constructor" << std::endl;
+            data = new int[10];
+            for(int i = 0; i < 10; i++){
+                data[i] = rhs.data[i];
+            }
+        }
+
     private:
         int* data;
 };
@@ -31,7 +44,14 @@ class Array{
 int main(){
 
     Array myArray;
+    Array myArray2 = myArray;
+
+    myArray.SetData(0, 100000);
+    myArray.SetData(1, 55);
+    myArray.SetData(2, 999);
+
     myArray.PrintingData();
+    myArray2.PrintingData();
 
     // Vector3 myVector;
     // myVector.x = 1.0f;
