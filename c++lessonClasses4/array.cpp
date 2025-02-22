@@ -4,17 +4,18 @@
         //special member functions
         //1. constructor
         Array::Array(){
-            std::cout << "Constructor" << std::endl;
-            for(int i = 0; i < 100000; i++){
-                data.push_back(i);
+            data = new int[10];
+            for(int i = 0; i < 10; i++){
+                data[i] = i * i;
             }
         }
-
+        //destructor
         Array::~Array(){
-            
+            delete[] data;
         }
+
         void Array::PrintingData(){
-            for(int i = 0; i < data.size(); i++){
+            for(int i = 0; i < 10; i++){
                 std::cout << data[i] << std::endl;
             }
         }
@@ -26,8 +27,9 @@
         //
         Array::Array(const Array& rhs){
             std::cout << "Copy constructor" << std::endl;
-            for(int i = 0; i < rhs.data.size(); i++){
-                data.push_back(rhs.data[i]);
+            data = new int[10];
+            for(int i = 0; i < 10; i++){
+                data[i] = rhs.data[i];
             }
         }
 
@@ -39,8 +41,10 @@
             if(&rhs == this){
                 return *this; 
             }
-            for(int i = 0; i < rhs.data.size(); i++){
-                data.push_back(rhs.data[i]);
+            delete[] data;
+            data = new int[10];
+            for(int i = 0; i < 10; i++){
+                data[i] = rhs.data[i];
             }        
             return *this;
         }

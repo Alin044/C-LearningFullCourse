@@ -1,5 +1,5 @@
 #include <iostream>
-#include "mikemath.hpp"
+#include "mikemath.hpp" //always include header files
 
 int main(){
     

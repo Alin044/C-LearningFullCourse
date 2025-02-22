@@ -1,8 +1,6 @@
 #ifndef ARRAY_HPP
 #define ARRAY_HPP
 
-#include <vector>
-
 class Array{
     public:
         //special member functions
@@ -21,10 +19,10 @@ class Array{
         //copy assignment operator
         //object is already constructed
         //makeing a copy later (myArray2 = myArray)
-        Array& operator = (const Array& rhs) = delete;
+        Array& operator = (const Array& rhs);
         
     private:
-        std::vector<int> data;
+        int* data;
 };
 
 #endif

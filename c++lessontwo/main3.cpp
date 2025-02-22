@@ -8,7 +8,7 @@ class UDL{
 };
 
 //https://www.youtube.com/watch?v=1RtiiRpjq6w&list=PLvv0ScY6vfd8j-tlhYVPYgiIyXduu6m-L&index=34
-//the shared pointer helps us avoid calling new and delete
+//the weak pointers
 
 int main(){
 

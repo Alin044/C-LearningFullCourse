@@ -8,12 +8,15 @@
 
 class Array{
     public:
+        //special member functions
+        //1. constructor
         Array(){
             data = new int[10];
             for(int i = 0; i < 10; i++){
                 data[i] = i * i;
             }
         }
+        //destructor
         ~Array(){
             delete[] data;
         }
@@ -53,7 +56,6 @@ class Array{
             return *this;
         }
         
-
     private:
         int* data;
 };
