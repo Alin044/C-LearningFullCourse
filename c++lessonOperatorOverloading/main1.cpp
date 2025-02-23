@@ -23,7 +23,7 @@ class Vector3f{
             x = x + 1;
             y = y + 1;
             z = z + 1;
-            return *this;
+            return *this;  
         }
         bool operator==(const Vector3f& rhs){
             if(x == rhs.x && y == rhs.y && z == rhs.z){
