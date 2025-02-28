@@ -9,6 +9,5 @@ int main(int argc, char* argv[]){
         std::cout << "SDL video system is ready  to go" << std::endl;
     }
 
-
     return 0;
 }
