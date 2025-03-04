@@ -12,6 +12,7 @@ class UDT{
     public:
         UDT(){
             m_privateVar = 0;
+            m_Info.passcode = 7;
         }
         friend void printPrivateVariableMembers(UDT u);
         //friend class PrivateSecurityInfo;
