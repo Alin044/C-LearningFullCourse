@@ -3,7 +3,7 @@
 
 class udt{
     public:
-        udt(int);
+        explicit udt(int);
 
     private:
         int m_variable;
@@ -18,7 +18,9 @@ udt::udt(int i){
 }
 
 int main(){
-    udt u1(500);
+    udt u1{500};
+    //udt u2 = 500 in cazul in care nu folosim explicit 
+    //does not allow me to give a different data type than what the constructor asks for 
 
     return 0;
 }
