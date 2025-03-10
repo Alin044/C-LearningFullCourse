@@ -9,7 +9,7 @@ class Base{
             std::cout << "Base destructor" << std::endl;
         }
 
-        void MemberFunc(){
+        virtual void MemberFunc(){
             std::cout << "Base::MemberFunc()" << std::endl;
         }
 };
@@ -23,12 +23,17 @@ class Derived : public Base{
             std::cout << "Derived destructor" << std::endl;
         }
 
-        void MemberFunc(){
+        void MemberFunc() override{
             std::cout << "Derived::MemberFunc()" << std::endl;
         }
 };
 
 int main(){
+
+    Base* instance = new Derived();
+    instance -> Base :: MemberFunc();
+
+    delete instance;
 
     return 0;
 }
