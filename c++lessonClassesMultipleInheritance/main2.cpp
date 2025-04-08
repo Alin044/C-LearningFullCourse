@@ -5,15 +5,15 @@ struct Entity{
     int x{4}, y{5};
 };
 
-struct Warrior : public Entity{
+struct Warrior : virtual public Entity{
     int power{10};
 };
 
-struct Goblin : public Entity{
+struct Goblin : virtual public Entity{
     int power{7};
 };
 
-struct Player :public Goblin , public Warrion{
+struct Player : virtual public Goblin , virtual public Warrior{
 
 };
 
