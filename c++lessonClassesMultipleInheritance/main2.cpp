@@ -13,7 +13,7 @@ struct Goblin : virtual public Entity{
     int power{7};
 };
 
-struct Player : virtual public Goblin , virtual public Warrior{
+struct Player : public Goblin , public Warrior{
 
 };
 
