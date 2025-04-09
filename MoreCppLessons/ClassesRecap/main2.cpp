@@ -1,10 +1,10 @@
 #include <iostream>
 #include <string>
 
-struct GameState{
-    bool chackpoint;
+struct GameState{ //start with the largest data type when defineing variables
     float score;
     short numberOfPlayers;
+    bool chackpoint;
 };
 
 int main(){
